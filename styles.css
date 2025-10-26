@@ -1,8 +1,10 @@
 :root {
-    --primary-color: #1f2937;
-    --accent-color: #2563eb;
-    --text-color: #111827;
-    --background-color: #f9fafb;
+    --primary-color: #8f1f1f;
+    --primary-dark: #6f1617;
+    --text-color: #3f1f17;
+    --muted-text: #7d5a4a;
+    --background-color: #f5eee3;
+    --surface-color: #fdf7ef;
     --max-width: 960px;
 }
 
@@ -22,11 +24,23 @@ body {
     flex-direction: column;
 }
 
-header {
+.site-header {
+    display: grid;
+    place-items: center;
+    gap: 1.5rem;
+    padding: 3rem 1.5rem 2.5rem;
+    background-color: var(--surface-color);
+}
+
+.brand-mark {
+    display: block;
+    width: clamp(96px, 12vw, 140px);
+    height: auto;
+}
+
+.hero-copy {
     text-align: center;
-    padding: 3rem 1.5rem 2rem;
-    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
-    color: #ffffff;
+    max-width: 32rem;
 }
 
 main {
@@ -39,20 +53,22 @@ main {
 }
 
 section {
-    background-color: #ffffff;
+    background-color: var(--surface-color);
     border-radius: 0.75rem;
     padding: 1.5rem;
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 10px 25px rgba(63, 31, 23, 0.08);
 }
 
 h1 {
     font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 0.5rem;
+    color: var(--primary-color);
 }
 
 h2 {
     font-size: clamp(1.5rem, 3vw, 2rem);
     margin-bottom: 0.75rem;
+    color: var(--primary-color);
 }
 
 button {
@@ -64,8 +80,8 @@ button {
     padding: 0.75rem 1.5rem;
     border-radius: 9999px;
     border: none;
-    background-color: var(--accent-color);
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: #fdf9ef;
     font-weight: 600;
     letter-spacing: 0.01em;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
@@ -73,8 +89,8 @@ button {
 
 button:hover {
     transform: translateY(-1px);
-    box-shadow: 0 12px 20px rgba(37, 99, 235, 0.3);
-    background-color: #1d4ed8;
+    box-shadow: 0 12px 20px rgba(111, 22, 23, 0.22);
+    background-color: var(--primary-dark);
 }
 
 button:active {
@@ -85,5 +101,5 @@ footer {
     text-align: center;
     padding: 1.5rem;
     font-size: 0.85rem;
-    color: #6b7280;
+    color: var(--muted-text);
 }
